@@ -1,0 +1,15 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+install:
+  - pip install -U pip
+  - pip install isort flake8 coveralls
+  - pip install -e git+https://github.com/shuup/shuup.git@master#egg=shuup[everything]
+  - pip install -e .
+script:
+  - isort -sp . --check-only shuup_api_permission/*.py
+  - flake8 shuup_api_permission
+  - py.test -ra -vvv --cov-config .coveragerc --cov shuup_api_permission shuup_api_permission_tests
+after_success: coveralls
