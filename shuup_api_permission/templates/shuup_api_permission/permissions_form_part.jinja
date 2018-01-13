@@ -1,0 +1,9 @@
+
+{% from "shuup/admin/macros/general.jinja" import content_block %}
+{% set permissions_form = form["permissions"] %}
+
+{% call content_block(permissions_form.title, "fa-info-circle") %}
+    {% for field in permissions_form %}
+        {{ bs3.field(field) }}
+    {% endfor %}
+{% endcall %}

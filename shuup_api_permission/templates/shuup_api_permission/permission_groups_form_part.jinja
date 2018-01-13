@@ -1,0 +1,9 @@
+
+{% from "shuup/admin/macros/general.jinja" import content_block %}
+{% set api_permission_groups_form = form["base"] %}
+
+{% call content_block(_("Basic details"), "fa-info-circle") %}
+    {% for field in api_permission_groups_form %}
+        {{ bs3.field(field) }}
+    {% endfor %}
+{% endcall %}
