@@ -8,10 +8,12 @@ except IOError:
 
 setup(
     name="shuup-api-permission",
-    version="0.1.0",
+    version="0.1.1",
     description="Shuup API Permission",
     license="MIT",
     author="Christian Hess",
+    author_email="christianhess.rlz@gmail.com",
+    url="https://github.com/chessbr/shuup-api-permission",
     packages=find_packages(),
     install_requires=[
         "rest-jwt-permission>=0.2.0,<2"
