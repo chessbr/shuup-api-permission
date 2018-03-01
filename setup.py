@@ -8,7 +8,7 @@ except IOError:
 
 setup(
     name="shuup-api-permission",
-    version="0.1.1",
+    version="0.1.2",
     description="Shuup API Permission",
     license="MIT",
     author="Christian Hess",
